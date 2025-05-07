@@ -1,0 +1,11 @@
+variable "aws_region" {}
+variable "bucket_name" {}
+variable "vpc_name" {}
+variable "vpc_cidr_block" {}
+variable "public_subnet_cidr_block" {}
+variable "az_sb" {}
+variable "private_subnet_cidr_block" {}
+variable "public_subnet_name" {}
+variable "private_subnet_name" {}
+variable "route_table_name" {}
+variable "internet_gateway_name" {}
