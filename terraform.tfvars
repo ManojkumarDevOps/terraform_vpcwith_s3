@@ -14,3 +14,4 @@ aws_nat_gtw               = "my-nat_gateway"
 aws_sg_name               = "my-security_group"
 aws_sg_description        = "Allow all"
 aws_ingress_ports         = ["22", "443", "80", "8080", "8443", "3306", "5432"]
+ec2_name                  = "test_ec2"

@@ -21,7 +21,7 @@ resource "aws_eip" "nat" {
 
 resource "aws_nat_gateway" "aws_nat" {
   connectivity_type = "public"
-  allocation_id = aws_eip.nat.id
+  allocation_id     = aws_eip.nat.id
   subnet_id         = aws_subnet.public[0].id
   tags = {
     Name        = var.aws_nat_gtw
@@ -55,10 +55,10 @@ resource "aws_route_table" "private_rt" {
   }
 }
 resource "aws_route" "privater" {
-  route_table_id = aws_route_table.private_rt.id
+  route_table_id         = aws_route_table.private_rt.id
   destination_cidr_block = "0.0.0.0/0"
-  nat_gateway_id = aws_nat_gateway.aws_nat.id
-  depends_on     = [aws_nat_gateway.aws_nat]
+  nat_gateway_id         = aws_nat_gateway.aws_nat.id
+  depends_on             = [aws_nat_gateway.aws_nat]
 }
 resource "aws_route_table_association" "public-association" {
   count          = length(var.public_subnet_cidr_block)

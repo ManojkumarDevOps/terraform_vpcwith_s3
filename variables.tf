@@ -17,3 +17,4 @@ variable "aws_ingress_ports" {
   description = "List of allowed ingress ports"
   type        = list(string)
 }
+variable "ec2_name" {}
